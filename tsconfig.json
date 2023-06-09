@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ES6",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "_build",
+    "baseUrl": "src",
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["*"],
+      "@root/*": ["../*"],
+      "@config": ["./config"],
+      "@api/*": ["./app/api/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
