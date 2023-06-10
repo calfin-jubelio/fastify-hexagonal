@@ -11,6 +11,7 @@ import { router } from '@/adapters/api/config';
 
 
 // Build Server
+let validator:any = JsonschemaValidator
 const build = async () => {
   // Fastify Server
   let server = fastify({
@@ -27,7 +28,7 @@ const build = async () => {
             }) : null,
     schemaController: {
       compilersFactory: {
-        buildValidator: JsonschemaValidator
+        buildValidator: validator
       }
     }
   });
